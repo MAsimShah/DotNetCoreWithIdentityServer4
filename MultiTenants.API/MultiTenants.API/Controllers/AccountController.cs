@@ -3,9 +3,9 @@ using MultiTenants.API.Models;
 
 namespace MultiTenants.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
-    public class AccountApiController : ControllerBase
+    public class AccountController : ControllerBase
     {
         [HttpPost("Login")]
         public IActionResult Login([FromBody]LoginViewModel model)

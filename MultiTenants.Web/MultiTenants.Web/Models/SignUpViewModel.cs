@@ -22,7 +22,7 @@ namespace MultiTenants.Web.Models
         public string Password { get; set; }
 
         [Required(ErrorMessage = "Confirm password is required")]
-        [Compare("Password", ErrorMessage = "Password and Confirm Password do not match")]
+        [Compare("Password", ErrorMessage = "Password and Confirm Password does not match")]
         [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
     }
