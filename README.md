@@ -35,12 +35,12 @@ This solution contains **two main projects**:
 
 ## 🛠 Technologies Used
 
-- ASP.NET Core
-- ASP.NET Core Web API
+- ASP.NET Core 10
+- ASP.NET Core 10 Web API
 - IdentityServer4
 - NSwag
 - ReDoc
-- .NET (Core)
+- .NET Core 10
 
 ---
 
