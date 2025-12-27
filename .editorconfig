@@ -28,6 +28,7 @@ dotnet_naming_symbols.types.applicable_accessibilities = *
 # dotnet_diagnostic.IDE1006.severity = none
 
 
+
 # -------------------------
 # Naming rules for injected interface fields
 # -------------------------
