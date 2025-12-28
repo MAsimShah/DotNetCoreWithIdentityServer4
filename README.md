@@ -1,8 +1,8 @@
-# MultiTenant
+# DotNetWithIdentityServer
 
-MultiTenant is a learning-focused solution built with **ASP.NET Core** that demonstrates how to secure a **Web API** using **IdentityServer4** and how a **Web application** can consume that API.
+DotNetWithIdentityServer is a learning-focused project built with **ASP.NET Core** that demonstrates how to secure a **Web API** using **IdentityServer4** and how a **Web application** can authenticate and consume that API.
 
-The main goal of this project is to **learn and understand IdentityServer4**, authentication, authorization, and how these concepts work in a multi-project ASP.NET Core setup.
+This project was created to better understand **authentication**, **authorization**, and **token-based security** in a multi-project ASP.NET Core environment.
 
 ---
 
@@ -64,7 +64,6 @@ This solution contains **two main projects**:
 - Configure clients and scopes
 - Secure Web API endpoints
 - Authenticate Web App users
-- (Optional) Add multi-tenant support concepts
 
 ---
 
