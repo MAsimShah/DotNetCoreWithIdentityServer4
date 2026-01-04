@@ -39,7 +39,7 @@ This solution consists of multiple projects (or a single API project with Identi
 ---
 ## 🛠 Technologies Used
 
-- ASP.NET Core (.NET 8 or later)
+- ASP.NET Core (.NET 10 or later)
 - Duende IdentityServer
 - ASP.NET Core Identity (with Entity Framework Core)
 - PostgreSQL (via Npgsql)
@@ -92,7 +92,8 @@ These commands create tables such as AspNetUsers, AspNetRoles, PersistedGrants, 
 
 2. Apply migrations (commands above)
 3. Run the API project
-   - IdentityServer runs at https://localhost:5001
+   - IdentityServer runs at https://localhost:5001, https://localhost:7164/
+   - Get token using Postman https://localhost:7164/content/token
    - Swagger UI available at /swagger
    - ReDoc available at /redoc
 4. Use Swagger UI to:
