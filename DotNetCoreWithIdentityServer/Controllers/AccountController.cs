@@ -1,10 +1,12 @@
 ﻿using DAL.Interfaces;
 using DotNetCoreWithIdentityServer.Models;
 using DTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DotNetCoreWithIdentityServer.Controllers
 {
+    [AllowAnonymous]
     [Route("[controller]")]
     [ApiController]
     public class AccountController : ControllerBase
@@ -16,6 +18,7 @@ namespace DotNetCoreWithIdentityServer.Controllers
             _accountService = accountServices;
         }
 
+        [AllowAnonymous]
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] LoginViewModel model)
         {
@@ -24,13 +27,18 @@ namespace DotNetCoreWithIdentityServer.Controllers
                 return BadRequest(ModelState);
             }
 
-            var isAuthenticateUser = await _accountService.IsUserExists(new SignInDTO() { Email = model.Email, Password = model.Password });
+            TokenResponseModel? token = await _accountService.IsUserExists(new SignInDTO() { Email = model.Email, Password = model.Password });
 
-            if (isAuthenticateUser)
+            if (token is not null)
             {
-                return Ok(new { Success = true, Message = "Login successful" });
-
+                return Ok(new
+                {
+                    access_token = token.AccessToken,
+                    expires_in = token.ExpiresIn,
+                    token_type = token.TokenType
+                });
             }
+
             return Ok(new { Success = false, Message = "Invalid Username or email" });
         }
 
