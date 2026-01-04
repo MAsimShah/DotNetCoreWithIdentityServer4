@@ -82,7 +82,7 @@ The project uses **PostgreSQL** with two separate contexts sharing the same data
 
 These commands create tables such as AspNetUsers, AspNetRoles, PersistedGrants, DeviceCodes, and Keys.
 
-🚀 ## Running the Project
+## 🚀 Running the Project
 1. Update appsettings.json with your PostgreSQL connection string
 
 ```bash
@@ -98,21 +98,21 @@ These commands create tables such as AspNetUsers, AspNetRoles, PersistedGrants, 
 4. Use Swagger UI to:
    - Login via /Account/Login (or directly request token at /connect/token using OAuth2 settings)
 
-🔐 ## Security Notes
+## 🔐 Security Notes
 
 - Resource Owner Password flow is used for demonstration/learning only (not recommended for production public clients)
 - In production: prefer Authorization Code with PKCE, or external identity providers
 - Replace AddDeveloperSigningCredential() with proper key management in production
 
-📖 ## Future Plans
+## 📖 Future Plans
 
 - Add a separate client web application (MVC/Razor Pages/Blazor) consuming the API
 - Implement multi-tenancy features
 - Add proper external login providers
 - Move configuration data (clients/scopes) to database store
 
-🤝 ## Contributions
+## 🤝 Contributions
 This is a personal learning project, but suggestions, issues, and improvements are very welcome!
 
-📄 ## License
+## 📄 License
 This project is for learning and educational purposes. Feel free to fork and experiment.
