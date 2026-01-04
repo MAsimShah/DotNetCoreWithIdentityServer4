@@ -4,6 +4,9 @@ This is a **learning-focused project** built with **ASP.NET Core** that demonstr
 
 The project shows how a client application (or external clients) can authenticate users, obtain access tokens and refresh tokens, and securely consume protected API endpoints.
 
+### Official Documentation
+- Duende IdentityServer: [https://docs.duendesoftware.com/identityserver/v6/](https://docs.duendesoftware.com/identityserver/v6/)
+
 Repo URL: https://github.com/Sumbal-Ayaz/MultiTenantsWeb
 
 ---
@@ -47,9 +50,6 @@ This solution consists of multiple projects (or a single API project with Identi
 - NSwag (OpenAPI documentation & Swagger UI)
 - ReDoc (alternative clean documentation UI)
 - JWT Bearer Authentication
-
-### Official Documentation
-- Duende IdentityServer: [https://docs.duendesoftware.com/identityserver/v6/](https://docs.duendesoftware.com/identityserver/v6/)
 
 ---
 ## 🚧 Current Status
