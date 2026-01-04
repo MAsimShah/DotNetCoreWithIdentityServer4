@@ -76,7 +76,7 @@ The project uses **PostgreSQL** with two separate contexts sharing the same data
    Update-Database -Context ApplicationDbContext
 
 2. **Duende IdentityServer operational tables** (`PersistedGrantDbContext` – for refresh tokens, codes, etc.)
-  ```bash
+   ```bash
   Add-Migration "InitialIdentityServerPersistedGrants" -Context PersistedGrantDbContext -OutputDir Data/Migrations/IdentityServer
   Update-Database -Context PersistedGrantDbContext
 
