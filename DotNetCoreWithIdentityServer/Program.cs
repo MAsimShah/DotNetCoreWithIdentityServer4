@@ -49,13 +49,17 @@ builder.Services.AddIdentityServer(options =>
 // END - add Identity and Duende identity server
 
 // implement jwt
-builder.Services.AddAuthentication("Bearer")
-    .AddJwtBearer("Bearer", options =>
-    {
-        options.Authority = "https://localhost:5001"; // IdentityServer
-        options.TokenValidationParameters.ValidateAudience = false;
-        options.RequireHttpsMetadata = false;
-    });
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = "Bearer";
+    options.DefaultChallengeScheme = "Bearer";
+})
+.AddJwtBearer("Bearer", options =>
+{
+    options.Authority = "https://localhost:7164";
+    options.RequireHttpsMetadata = false;
+    options.TokenValidationParameters.ValidateAudience = false;
+});
 
 builder.Services.AddAuthorization();
 
@@ -75,7 +79,7 @@ builder.Services.AddOpenApiDocument(config =>
     {
         Type = NSwag.OpenApiSecuritySchemeType.OAuth2,
         Flow = NSwag.OpenApiOAuth2Flow.Password,
-        TokenUrl = "https://localhost:5001/connect/token",
+        TokenUrl = "https://localhost:7164/connect/token",
         Scopes = new Dictionary<string, string>
         {
             { "myapi", "Access My API" }
