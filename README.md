@@ -7,7 +7,7 @@ The project shows how a client application (or external clients) can authenticat
 ### Official Documentation
 - Duende IdentityServer: [https://docs.duendesoftware.com/identityserver/v6/](https://docs.duendesoftware.com/identityserver/v6/)
 
-Repo URL: https://github.com/Sumbal-Ayaz/MultiTenantsWeb
+Web-APP URL: [MultiTenantsWeb](https://github.com/Sumbal-Ayaz/MultiTenantsWeb))
 
 ---
 ## 📌 Project Overview
